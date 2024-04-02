@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 261ded05554f8524a82ed54295b6f1ca
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Lula Borges
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 317e117c492b51747be7ece7e7a04888, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

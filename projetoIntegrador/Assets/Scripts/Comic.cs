@@ -25,12 +25,6 @@ public class Comic : MonoBehaviour
     public float angle1;
 
 
-    private void Awake()
-    {
-        jigsawManager = FindObjectOfType<JigsawManager>();
-        if (jigsawManager != null)
-            jigsawManager.DisableParts();
-    }
     private void Start()
     {
         comic.transform.position = posComicOnePage.position;

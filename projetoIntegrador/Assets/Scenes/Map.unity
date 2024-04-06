@@ -3747,7 +3747,7 @@ PrefabInstance:
     - target: {fileID: 1170202823454082031, guid: 50a76ec680947514482317bc29b4ff1c, type: 3}
       propertyPath: texts.Array.data[4]
       value: "Sim! E a Morada do Ba\xEDs \xE9 chamada assim porque era da fam\xEDlia
-        de Bernardo Franco Ba\xEDs. A filha dela, Lydia Ba\xEDs, foi uma artista
+        de Bernardo Franco Ba\xEDs. A filha dele, Lydia Ba\xEDs, foi uma artista
         importante e pintou afrescos dentro do sobrado."
       objectReference: {fileID: 0}
     - target: {fileID: 1170202823454082031, guid: 50a76ec680947514482317bc29b4ff1c, type: 3}
@@ -17566,7 +17566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1170202823454082031, guid: 50a76ec680947514482317bc29b4ff1c, type: 3}
       propertyPath: texts.Array.data[4]
-      value: "Sim Manu! Ele \xE9 um centro educacional que ensina sobre a preserva\xE7\xE3o
+      value: "Sim, Manu! Ele \xE9 um centro educacional que ensina sobre a preserva\xE7\xE3o
         ambiental e conserva\xE7\xE3o da natureza. Possui uma se\xE7\xE3o interativa
         para explorar o Pantanal de maneira divertida e educativa."
       objectReference: {fileID: 0}
@@ -17584,9 +17584,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1170202823454082031, guid: 50a76ec680947514482317bc29b4ff1c, type: 3}
       propertyPath: texts.Array.data[7]
-      value: "E o Bioparque Pantanal, \xE9 o maior complexo de \xE1gua doce do mundo,
-        foi inaugurado em Mato Grosso do Sul, com quase 5 milh\xF5es de litros de
-        \xE1gua."
+      value: "E o Bioparque Pantanal \xE9 um dos maiores complexos de \xE1gua doce
+        do mundo. Foi inaugurado em Mato Grosso do Sul, com quase 5 milh\xF5es de
+        litros de \xE1gua."
       objectReference: {fileID: 0}
     - target: {fileID: 1170202823454082031, guid: 50a76ec680947514482317bc29b4ff1c, type: 3}
       propertyPath: texts.Array.data[8]

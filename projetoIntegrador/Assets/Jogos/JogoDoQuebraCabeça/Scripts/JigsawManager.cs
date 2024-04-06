@@ -1,14 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class JigsawManager : MonoBehaviour
 {
+    public Button btnPause;
+    public Button btnExit;
     public RandonPositions randon;
     public GameObject instructions;
     public SpriteRenderer panel;
@@ -29,13 +28,14 @@ public class JigsawManager : MonoBehaviour
         // Verifica se as instruções já foram exibidas antes de iniciá-las.
         if (!PlayerPrefs.HasKey("InstructionsQuebraCabeca") || PlayerPrefs.GetInt("InstructionsQuebraCabeca") == 0)
         {
-
+            btnPause.enabled = false;
             instruction = true;
             StartCoroutine(SpawnInstructions());
             Pause();
         }
         else
         {
+            EnableParts();
             Play();
         }
     }
@@ -49,7 +49,7 @@ public class JigsawManager : MonoBehaviour
     public void Play()
     {
         if (randon.reset != 1)
-        {
+        { 
             randon.StartCoroutine(randon.RandSpriteButton());
         }
     }
@@ -62,20 +62,28 @@ public class JigsawManager : MonoBehaviour
     }
     public void Pause()
     {
+        btnExit.enabled = false;
+        btnPause.enabled = false;
         DisableParts();
         randon.pause = true;
     }
     public void NoInstruction()
     {
+        btnExit.enabled = false;
+        btnPause.enabled = true;
         randon.pause = false;
     }
     public void NoPause()
     {
         EnableParts();
+        btnExit.enabled = true;
+        btnPause.enabled = true;
         randon.pause = false;
     }
     public void GoGame()
     {
+        btnExit.enabled = true;
+        btnPause.enabled = true;
         instructions.SetActive(false);
         panel.gameObject.SetActive(false);
         comic.rotate = false;

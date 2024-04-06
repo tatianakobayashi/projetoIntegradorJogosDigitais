@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class RandonPositions : MonoBehaviour
 {
+    public Button btnPause;
     public static int okPieces;
     public int index, indexBooks = 0, reset = 0;
     public float time;
@@ -29,7 +30,7 @@ public class RandonPositions : MonoBehaviour
 
     private string namePieces;
     private int indexReserve, min, len;
-    private bool startGame, randomSprite, gameOver, goToMapOk;
+    private bool startGame, randomSprite, gameOver, goToMapOk, winGameOk = false;
 
     void Start()
     {
@@ -72,6 +73,7 @@ public class RandonPositions : MonoBehaviour
             minTime.text = "00";
             secTime.text = "00";
             StopPiece();
+            btnPause.enabled = false;
             panel.SetActive(true);
             popUpWinGame.SetActive(true);
         }
@@ -104,19 +106,6 @@ public class RandonPositions : MonoBehaviour
 
     public void BtnNumBook(string sceneName)
     {
-        if (indexBooks >= 0 && indexBooks <=3)
-        {
-            PlayerPrefs.SetInt("saveIndex", 1);
-            PlayerPrefs.Save();
-            indexBooks++;
-            PlayerPrefs.SetInt("numBooks", indexBooks);
-            PlayerPrefs.Save();
-            if(indexBooks == 2)
-            {
-                PlayerPrefs.SetInt("panelOk", 1);
-                PlayerPrefs.Save();
-            }
-        }
         SceneManager.LoadScene(sceneName);
     }
 
@@ -226,6 +215,7 @@ public class RandonPositions : MonoBehaviour
     }
     public void BtnOptionPieces(int numImage)
     {
+        btnPause.enabled = true;
         index = numImage;
         namePieces = spriteFull[index].name;
         startGame = true;
@@ -262,8 +252,27 @@ public class RandonPositions : MonoBehaviour
 
     void WinGame()
     {
+        if (!winGameOk)
+        {
+            if (indexBooks >= 0 && indexBooks <= 3)
+            {
+                PlayerPrefs.SetInt("saveIndex", 1);
+                PlayerPrefs.Save();
+                indexBooks++;
+                PlayerPrefs.SetInt("numBooks", indexBooks);
+                PlayerPrefs.Save();
+                if (indexBooks == 2)
+                {
+                    PlayerPrefs.SetInt("panelOk", 1);
+                    PlayerPrefs.Save();
+                }
+                winGameOk = true;
+                Books();
+            }
+        }
         canvasWinGame.SetActive(true);
         pause = true;
+        StopPiece();
         buttonPause.SetActive(false);
     }
 
@@ -310,13 +319,6 @@ public class RandonPositions : MonoBehaviour
             books[1].GetComponent<SpriteRenderer>().color = colorBook;
             books[2].GetComponent<SpriteRenderer>().color = colorBook;
             books[3].GetComponent<SpriteRenderer>().color = colorBook;
-        }
-    }
-    public void StartpPiece()
-    {
-        for (int i = 0; i < randonPositions.Length; i++)
-        {
-            randonPositions[i].gameObject.GetComponent<DragEndDrop>().blockMove = true; ;
         }
     }
     private void FirstTime()

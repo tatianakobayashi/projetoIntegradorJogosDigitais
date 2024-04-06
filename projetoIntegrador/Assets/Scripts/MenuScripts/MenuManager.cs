@@ -54,4 +54,8 @@ public class MenuManager : MonoBehaviour
         componentImage.GetComponent<Animator>().SetTrigger("In");
         yield return new WaitForSeconds(3);
     }
+    public static void ResetAllPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll(); // Exclui todos os PlayerPrefs
+    }
 }

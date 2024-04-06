@@ -17,8 +17,6 @@ public class SaveAndLoadJigsaw : MonoBehaviour
             {
                 if (randon.spriteFull[i].name == PlayerPrefs.GetString("Img0"))
                 {
-                    Debug.Log("Imagem 1 removida: "+randon.spriteFull[i].name);
-
                     randon.spriteFull.RemoveAt(i);
                     PlayerPrefs.SetInt("saveIndex", 2);
                     PlayerPrefs.Save();
@@ -34,8 +32,6 @@ public class SaveAndLoadJigsaw : MonoBehaviour
             {
                 if (randon.spriteFull[i].name == PlayerPrefs.GetString("Img0"))
                 {
-                    Debug.Log("Imagem 1 removida: " + randon.spriteFull[i].name);
-
                     randon.spriteFull.RemoveAt(i);
                     PlayerPrefs.SetInt("saveIndex", 2);
                     PlayerPrefs.Save();
@@ -45,8 +41,6 @@ public class SaveAndLoadJigsaw : MonoBehaviour
             {
                 if (randon.spriteFull[i].name == PlayerPrefs.GetString("Img1"))
                 {
-                    Debug.Log("Imagem 2 removida: " + randon.spriteFull[i].name);
-
                     randon.spriteFull.RemoveAt(i);
                     PlayerPrefs.SetInt("saveIndex", 2);
                     PlayerPrefs.Save();
@@ -62,8 +56,6 @@ public class SaveAndLoadJigsaw : MonoBehaviour
             {
                 if (randon.spriteFull[i].name == PlayerPrefs.GetString("Img0"))
                 {
-                    Debug.Log("Imagem 1 removida: " + randon.spriteFull[i].name);
-
                     randon.spriteFull.RemoveAt(i);
                     PlayerPrefs.SetInt("saveIndex", 2);
                     PlayerPrefs.Save();
@@ -73,8 +65,6 @@ public class SaveAndLoadJigsaw : MonoBehaviour
             {
                 if (randon.spriteFull[i].name == PlayerPrefs.GetString("Img1"))
                 {
-                    Debug.Log("Imagem 2 removida: " + randon.spriteFull[i].name);
-
                     randon.spriteFull.RemoveAt(i);
                     PlayerPrefs.SetInt("saveIndex", 2);
                     PlayerPrefs.Save();
@@ -84,8 +74,6 @@ public class SaveAndLoadJigsaw : MonoBehaviour
             {
                 if (randon.spriteFull[i].name == PlayerPrefs.GetString("Img2"))
                 {
-                    Debug.Log("Imagem 3 removida: " + randon.spriteFull[i].name);
-
                     randon.spriteFull.RemoveAt(i);
                     PlayerPrefs.SetInt("saveIndex", 2);
                     PlayerPrefs.Save();
@@ -101,8 +89,6 @@ public class SaveAndLoadJigsaw : MonoBehaviour
             {
                 if (randon.spriteFull[i].name == PlayerPrefs.GetString("Img0"))
                 {
-                    Debug.Log("Imagem 1 removida: " + randon.spriteFull[i].name);
-
                     randon.spriteFull.RemoveAt(i);
                     PlayerPrefs.SetInt("saveIndex", 2);
                     PlayerPrefs.Save();
@@ -112,8 +98,6 @@ public class SaveAndLoadJigsaw : MonoBehaviour
             {
                 if (randon.spriteFull[i].name == PlayerPrefs.GetString("Img1"))
                 {
-                    Debug.Log("Imagem 2 removida: " + randon.spriteFull[i].name);
-
                     randon.spriteFull.RemoveAt(i);
                     PlayerPrefs.SetInt("saveIndex", 2);
                     PlayerPrefs.Save();
@@ -123,8 +107,6 @@ public class SaveAndLoadJigsaw : MonoBehaviour
             {
                 if (randon.spriteFull[i].name == PlayerPrefs.GetString("Img2"))
                 {
-                    Debug.Log("Imagem 3 removida: " + randon.spriteFull[i].name);
-
                     randon.spriteFull.RemoveAt(i);
                     PlayerPrefs.SetInt("saveIndex", 2);
                     PlayerPrefs.Save();
@@ -134,8 +116,6 @@ public class SaveAndLoadJigsaw : MonoBehaviour
             {
                 if (randon.spriteFull[i].name == PlayerPrefs.GetString("Img3"))
                 {
-                    Debug.Log("Imagem 4 removida: " + randon.spriteFull[i].name);
-
                     randon.spriteFull.RemoveAt(i);
                     PlayerPrefs.SetInt("saveIndex", 2);
                     PlayerPrefs.Save();
